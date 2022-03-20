@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>lu2v</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+<body>
+<div id="app">
+    <section class="section">
+        <div class="container">
+            <h1 class="title">
+                Loading...
+            </h1>
+        </div>
+    </section>
+</div>
+<script src="/js/main.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+</script>
+<!-- <noscript>
+    <img src="https://stats.cons.gr/ingress/611fb17e-0cfb-44bb-9a23-089dc4a9c9d5/pixel.gif">
+</noscript>
+<script defer src="https://stats.cons.gr/ingress/611fb17e-0cfb-44bb-9a23-089dc4a9c9d5/script.js"></script>
+</body> -->
+</html>
